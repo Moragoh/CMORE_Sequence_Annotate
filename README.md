@@ -1,3 +1,5 @@
+Aren't LLMs great?
+
 # **Ground Truth Video Annotator**
 
 This tool is used to annotate "Success" sequences in videos, such as a block landing in a target zone. It uses a live YOLO model to draw the target zone on the video as you annotate.
