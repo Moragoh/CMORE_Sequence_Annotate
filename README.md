@@ -15,9 +15,8 @@ Place your files in a single folder as shown below. The script **must** be in th
 /your\_project\_folder  
   ├── annotate\_video.py       \<-- The main script  
   ├── keypoint\_detector.py    \<-- Your detector class file  
-  ├── best\_model.pt           \<-- Your trained YOLO model  
-  └── my\_video.mp4            \<-- The video you want to annotate
-
+  └──  best\_model.pt           \<-- Your trained YOLO model  
+  
 ## **2\. How to Use**
 
 ### **Step 1: Run the Tool**
