@@ -7,7 +7,7 @@ Let's start an attempt when we see a **block detached from a user's hand enter t
 ### **Step 1: Install Dependencies**
 
 Open your terminal and run the following command to install all required libraries:  
-pip install ultralytics torch torchvision pandas numpy opencv-python Pillow
+```pip install ultralytics torch torchvision pandas numpy opencv-python Pillow```
 
 ### **Step 2: File Structure**
 
