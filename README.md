@@ -1,6 +1,6 @@
 Aren't LLMs great?
 ## **0\. Rules for Labeling**
-Let's start an attempt when we see a **block detached from a user's hand enter the contour zone** (let's not mark start if a block enters the contour zone but isn't detached from the hand yet), and stop an attempt when the block after being dropped **loses significant momentum** (so it can still be moving very little as it is at the end of it's tumble, but lets try and end the attempt earlier than later so we don't get too many frames of a block not moving at all or moving very little, which can confuse the model).
+Let's start an attempt when we see a **block detached from a user's hand enter the contour zone** (let's not mark start if a block enters the contour zone but isn't detached from the hand yet, or if the block is detached but hasn't entered the contour zone yet), and stop an attempt when the block after being dropped **loses significant momentum** (so it can still be moving very little as it is at the end of it's tumble, but lets try and end the attempt earlier than later so we don't get too many frames of a block not moving at all or moving very little, which can confuse the model).
 
 ## **1\. Setup & Installation**
 
