@@ -1,6 +1,6 @@
 Aren't LLMs great?
 ## **0\. Rules for Labeling**
-Let's start an attempt when we see the block **detach** from a participant's hand, and stop an attempt when the block after being drop **loses significant momentum** (so it can still be moving very little as it is at the end of it's tumble, but lets try and end the attempt earlier than later so we don't get too many frames of a block not moving at all or moving very little which can confuse the model).
+Let's start an attempt when we see the block **detach** from a participant's hand, and stop an attempt when the block after being dropped **loses significant momentum** (so it can still be moving very little as it is at the end of it's tumble, but lets try and end the attempt earlier than later so we don't get too many frames of a block not moving at all or moving very little which can confuse the model).
 
 ## **1\. Setup & Installation**
 
