@@ -28,7 +28,7 @@ TEXT_COLOR = (0, 255, 0)       # Green
 WARN_COLOR = (0, 0, 255)       # Red
 ACTIVE_COLOR = (0, 165, 255)   # Orange
 FONT = cv2.FONT_HERSHEY_SIMPLEX
-DETECTION_INTERVAL = 10        # Run detection every N frames
+DETECTION_INTERVAL = 120        # Run detection every N frames
 DEFAULT_MODEL_PATH = "./keypoint_detector.pt" # Model path is now fixed
 
 class GroundTruthAnnotator:
@@ -141,6 +141,7 @@ class GroundTruthAnnotator:
         print("\n--- CONTROLS ---")
         print(" [k] : Next Frame")
         print(" [j] : Previous Frame")
+        print(" [l] : Jump +10 Frames")
         print(" [1] : Mark Success START")
         print(" [2] : Mark Success STOP")
         print(" [q] : Save & Quit")
@@ -150,6 +151,7 @@ class GroundTruthAnnotator:
         
         try:
             while True:
+
                 self.cap.set(cv2.CAP_PROP_POS_FRAMES, self.current_frame_idx)
                 ret, frame = self.cap.read()
                 
@@ -184,7 +186,7 @@ class GroundTruthAnnotator:
                     f"Frame: {self.current_frame_idx} / {self.total_frames}",
                     f"Time: {self.format_time(self.current_frame_idx)}",
                     f"Handedness: {self.handedness} (Set at launch)",
-                    "Controls: [j] Prev, [k] Next", # Added controls
+                    "Controls: [j] Prev, [k] Next, [l] +10", # Added jump control
                 ]
                 
                 if self.active_start is not None:
@@ -258,7 +260,9 @@ class GroundTruthAnnotator:
                     else:
                         self.feedback_msg = "Error: No Start Marked"
                         self.feedback_timer = 20
-                # 'h' key logic removed
+                elif key == ord('l'):
+                    if not video_ended: 
+                        self.current_frame_idx = min(self.current_frame_idx + 10, self.total_frames - 1)
 
         finally:
             self.save_csv()
