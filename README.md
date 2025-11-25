@@ -1,8 +1,8 @@
 Aren't LLMs great?
 ## **PLEASE READ 0\. Rules for Labeling**
-ONLY label sequence start if the block (even partially) has entered the contour zone AND it is COMPLETELY DETATCHED from any fingers.
+label sequence start if the block (even partially) has entered the contour zone AND human can tell the block has detached from the hand.
 
-ONLY label sequence start if NOTHING is moving within the contour zone. please use the rewind functioanlity to find the exact point all blocks stop moving and mark stop.
+label sequence end when human decide nothing is moving within the contour zone.
 ## **1\. Setup & Run**
 
 ### **Step 1: Install Dependencies**
